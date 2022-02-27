@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-WebApi-1AB6944E-D164-4536-835E-7590F10DF1E9</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.1" />
+        <PackageReference Include="Microsoft.Identity.Web" Version="1.16.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ProgTracker.Application\ProgTracker.Application.csproj" />
+      <ProjectReference Include="..\ProgTracker.Domain\ProgTracker.Domain.csproj" />
+      <ProjectReference Include="..\ProgTracker.Infrastructure\ProgTracker.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Model\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Model\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Model\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Model\**" />
+    </ItemGroup>
+
+</Project>
